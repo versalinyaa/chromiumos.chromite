@@ -63,7 +63,7 @@ def _UpdateAlternatesDir(alternates_root, reference_maps, projects):
     alt_path = os.path.join(alternates_root, project)
     paths = []
     for k, v in reference_maps.iteritems():
-      suffix = os.path.join('.repo', 'project-objects', project, 'objects')
+      suffix = os.path.join(project, 'objects')
       if os.path.exists(os.path.join(k, suffix)):
         paths.append(os.path.join(v, suffix))
 
